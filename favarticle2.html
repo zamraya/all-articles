@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet</title>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  background-color: white;
+  color: #333;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #e85470;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.icons .icon {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: black;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 18px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.about h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+.about h1 span {
+  color: #e85470;
+}
+
+.about-text h3 {
+  font-size: 24px;
+  color: white;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: white;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.description {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.image-container {
+  margin-top: 30px;
+  position: relative;
+}
+
+.image-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #f7d8e0;
+}
+        .pagination {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%; 
+        }
+        
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            display: inline-block; 
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+</style>
+<body>
+<section class="about">
+    <h1>Ab<span>out</span></h1>
+    <p class="description">
+         <p>What is crocheting & Why is it a GOOD HOBBY?</p>
+    </p>
+
+    <div class="about-content">
+        <div class="about-item">
+            <img src="/favarticle/crochet" alt="Crochet">
+            <div class="about-text">
+                <h3>What is Crochet?</h3>
+                <p>Crochet got its name from a French word for 'HOOK'. It is an artistic hobby where you create exquisite pieces of textile by using yarn and a single needle with a hooked edge.</p>
+            </div>
+        </div>
+
+        <div class="about-item reverse">
+            <img src="/favarticle/hobby" alt="Hobby">
+            <div class="about-text">
+                <h3>Why is it a GOOD HOBBY?</h3>
+                <p>When crocheting, the brain releases serotonin that helps calm the mind and improve mood. Crocheting and similar activities are shown to improve Alzheimer's disease, insomnia, and depression.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <div class="pagination">
+          <a href="favarticle3.html">&laquo;</a>
+          <a href="favarticle1.html">1</a>
+          <a href="favarticle2.html">2</a>
+          <a href="favarticle3.html">3</a>
+          <a href="favarticle1.html">&raquo;</a>
+        </div>
+
+        <footer>
+          <a href="home.html" class="back-button">Back to Home</a>
+        </footer>
+</body>
+</html>

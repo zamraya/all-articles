@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNFACTS</title>
+</head>
+<style>
+       * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      body {
+        background-color: white;
+        color: #333;
+      }
+
+      header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 20px 40px;
+       background-color: #fff;
+      }
+
+     .funfacts {
+       padding: 60px 20px;
+       text-align: center;
+       background-color: black;
+      }
+
+    .funfacts h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 10px;
+     }
+
+    .funfacts p {
+      font-size: 18px;
+      color: white;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .funfacts-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .funfacts-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .funfacts img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .funfacts-text {
+     text-align: center;
+    }
+
+    .funfacts h1 {
+     font-size: 48px;
+     font-weight: bold;
+     color: white;
+    }
+
+        .funfacts h1 span {
+          color: #e85470;
+        }
+
+        .funfacts-text h3 {
+          font-size: 24px;
+          color: white;
+        }
+
+        .funfacts-text p {
+          font-size: 16px;
+          color: white;
+        }
+
+        .reverse {
+          flex-direction: row-reverse;
+        }
+
+        .description {
+           max-width: 600px;
+           margin: 20px auto;
+           font-size: 14px;
+           color: #aaa;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .image-container {
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            border: 5px solid #f7d8e0;
+        }
+
+        .pagination {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%; 
+        }
+        
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            display: inline-block; 
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+</style>
+<body>
+<section class="funfacts">
+    <h1>Fun Cro<span>chet Facts</span></h1>
+    <p class="description">
+         <p>It's crochet, not knit!</p>
+    </p>
+
+    <div class="funfacts-content">
+        <div class="funfacts-item">
+            <img src="/favarticle/knifeorpencil" alt="Knife or Pencil">
+            <div class="funfacts-text">
+                <h3>#1 KNIFE OR PENCIL?</h3>
+            </div>
+        </div>
+
+        <div class="funfacts-item reverse">
+            <img src="/favarticle/yarneater" alt="Yarn Eater">
+            <div class="funfacts-text">
+                <h3>#2 YARN EATER</h3>
+            </div>
+        </div>
+
+        <div class="funfacts-item">
+            <img src="/favarticle/crocheting" alt="Crocheting">
+            <div class="funfacts-text">
+                <h3>#3 Neighbors will never complain you are crocheting too loud.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div class="pagination">
+            <a href="favarticle3.html">&laquo;</a>
+            <a href="favarticle1.html">1</a>
+            <a href="favarticle2.html">2</a>
+            <a href="favarticle3.html">3</a>
+            <a href="favarticle1.html">&raquo;</a>
+        </div>
+
+        <footer>
+            <a href="home.html" class="back-button">Back to Home</a>
+        </footer>
+</body>
+</html>
