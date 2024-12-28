@@ -45,7 +45,7 @@ header {
 }
 
 .nav-links .sign-up {
-    background-color: #007bff;
+    background: linear-gradient(100deg, #0D324D, #7F5A83);
     padding: 8px 15px;
     border-radius: 5px;
 }
