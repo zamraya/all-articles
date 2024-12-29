@@ -6,9 +6,9 @@
     <title>ALL ARTICLES</title>
     <link rel="stylesheet" href="home.css">
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="#" class="sign-up">Log in/Sign Up</a></li>
             </ul>
         </nav>
@@ -38,9 +38,19 @@
                     <input type="text" placeholder="Explore Here...">
                     <span class="search-icon">&#128269;</span>
                 </div>
-                <div class="featured-image">
-                    <img src="https://via.placeholder.com/600x300" alt="Scenic Image">
+               
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="/background/scene1" alt="Scenic Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/background/scene2" alt="Scenic Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="/background/scene3" alt="Scenic Image 3">
+                    </div>
                 </div>
+                
                 <div class="places-cards">
                     <div class="card">
                         <img src="/ctu/1" alt="CTU">
@@ -65,12 +75,30 @@
         </div>
     </section>
     
-        <footer>
-<div class="social-icons">
-    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-</div>
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
 </html>
