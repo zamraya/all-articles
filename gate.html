@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTICLE-ENTRANCE</title>
+    <style>
+      body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main {
+    padding: 40px;
+}
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: white;
+}
+.filter {
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+.filter.active {
+    font-weight: bold;
+    color: gray;
+}
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: start; 
+}
+
+article {
+    text-align: center; 
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+article h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+article p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+article a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+article a:hover {
+    color: #0056b3; 
+}
+    footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <h1>ENTRANCE</h1>
+            <p>We write about: 
+                <span class="filter active">Everything</span> 
+                <span class="filter">Process</span> 
+                <span class="filter">Entrance</span> 
+            </p>
+        </section>
+        <section class="blog-posts">
+            <article>
+                <img src="/gate/1st" alt="Line">
+                <h3>PROCESS 1</h3>
+                <p>Entrance</p>
+                <p>The Cebu Technological University (CTU) gate is the main entrance and exit of the campus, welcoming students, faculty, and visitors. It represents the university's commitment to education and discipline. More than just a structure, it marks the start of a learning environment where students grow and prepare for their future careers. The gate also reflects the university's identity and values.</p>
+            </article>
+            <article>
+                <img src="/gate/2nd" alt="Order">
+                <h3>PROCESS 2</h3>
+                <p>The System</p>
+                <p>A login system that uses student ID swipes to authenticate users.</p>
+            </article>
+            <article>
+                <img src="/gate/3rd" alt="Table">
+                <h3>PROCESS 3</h3>
+                <p>ID Swipe</p>
+                <p>Each student is issued an ID card containing an RFID chip or a magnetic stripe. The card holds a unique identifier that is linked to the student's information in the school's database. The student might receive a confirmation message on the Monitor or the arrow in the system after a successful swipe, showing details like their name and access rights. If there's an error, they may be prompted to contact administration(MIS) or try swiping again.</p>
+            </article>
+            <article>
+                <img src="/gate/4th" alt="Aftercare">
+                <h3>PROCESS 4</h3>
+                <p>Entry</p>
+                <p>Once the system verifies the card's unique identifier, it grants access, allowing the student to enter the campus. </p>
+            </article>
+        </section>
+    </main>
+    
+      <footer>
+          <a href="home.html" class="back-button">Back to Home</a>
+        </footer>
+</body>
+</html>
