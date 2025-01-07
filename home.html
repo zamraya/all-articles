@@ -1,102 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL ARTICLES</title>
-    <link rel="stylesheet" href="home.css">
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fff;
+    }
+
+    header {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 30px 0 10px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+      background-color: #f9f9f9;
+      position: relative;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .logo img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      width: 200px;
+      padding: 10px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar .main-topic {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .sidebar .subtopics {
+      display: none;
+      margin-left: 15px;
+      font-size: 12px;
+    }
+
+    .sidebar .subtopics a {
+      text-decoration: none;
+      color: #555;
+      display: block;
+      margin: 5px 0;
+    }
+
+    .sidebar .subtopics a:hover {
+      color: blue;
+    }
+
+    .login {
+      display: flex;
+      align-items: center;
+    }
+
+    .login img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      background: linear-gradient(100deg, #ADF7F2, #15AAFF);
+    }
+
+    .login a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .login a:hover {
+      color: blue;
+    }
+
+    .latest {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 50px 0 20px; 
+      text-align: center;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap; 
+      gap: 20px;
+      margin: 0 20px;
+    }
+
+    .card {
+      flex: 1;
+      max-width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      background-color: #fff;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content .category {
+      color: red;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-content .title a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .card-content .title a:hover {
+      color: blue;
+    }
+
+    footer {
+      background-color: #f9f9f9;
+      padding: 20px 0;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px; 
+  margin: 30px 0; 
+}
+
+.social-icons a {
+  font-size: 24px; 
+  color: #555; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
+.social-icons a[aria-label="Facebook"]:hover {
+  color: #3b5998; 
+}
+
+.social-icons a[aria-label="Twitter"]:hover {
+  color: #1da1f2; 
+}
+
+.social-icons a[aria-label="Instagram"]:hover {
+  color: #e1306c; 
+}
+
+    .ads {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .ads img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">ARTICLES</div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html" class="sign-up">Log in/Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="home">
-        <div class="home-content">
-            <div class="left-section">
-                <h1>Hola, bienvenido!</h1>
-                <p>Explore insights, ideas, and updates crafted just for you.
-                </p>
-            </div>
-            <div class="right-section">
-                <div class="search-bar">
-                    <input type="text" placeholder="Explore Here...">
-                    <span class="search-icon">&#128269;</span>
-                </div>
-               
-                <div class="slideshow-container">
-                    <div class="slide fade">
-                        <img src="/background/scene1" alt="Scenic Image 1">
-                    </div>
-                    <div class="slide fade">
-                        <img src="/background/scene2" alt="Scenic Image 2">
-                    </div>
-                    <div class="slide fade">
-                        <img src="/background/scene3" alt="Scenic Image 3">
-                    </div>
-                </div>
-                
-                <div class="places-cards">
-                    <div class="card">
-                        <img src="/ctu/1" alt="CTU">
-                        <h3>ALL ABOUT</h3>
-                        <p>CTU</p>
-                        <a href="ctu1.html" class="read-more">Read More</a>
-                    </div>
-                    <div class="card">
-                        <img src="/favarticle/1" alt="FAVARTICLE">
-                        <h3>MY</h3>
-                        <p>FAVORITE</p>
-                        <a href="favarticle1.html" class="read-more">Read More</a>
-                    </div>
-                    <div class="card">
-                        <img src="/entrance/1" alt="GATE">
-                        <h3>ALL ABOUT</h3>
-                        <p>ENTRANCE</p>
-                        <a href="entrance.html" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
+<header>Artículos</header>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+<nav>
+  <span class="hamburger" onclick="toggleSidebar()">☰</span>
+  <div class="nav-center">
+    <a href="home.html">Home</a>
+    <span style="margin: 0 10px;">|</span>
+    <a href="#">Features</a>
+    <span style="margin: 0 10px;">|</span>
+    <a href="#">About</a>
+    <span style="margin: 0 10px;">|</span>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  </div>
+  <div class="login">
+    <img src="/background/logo" alt="Login">
+    <a href="login.html">Log in</a>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="main-topic" onclick="toggleSubtopics('subtopic1')">CTU - DANAO CAMPUS</div>
+    <div class="subtopics" id="subtopic1">
+      <a href="ctu1.html">Centrum</a>
+      <a href="ctu2.html">CTU Danao Fablab</a>
+      <a href="ctu3.html">Kadasig Gym</a>
+      <a href="ctu4.html">Library</a>
+      <a href="ctu5.html">Oval</a>
+      <a href="ctu6.html">Quadrangle</a>
+    </div>
+    <div class="main-topic" onclick="toggleSubtopics('subtopic2')">MY FAVORITE</div>
+    <div class="subtopics" id="subtopic2">
+      <a href="favarticle1.html">Crochet</a>
+      <a href="favarticle2.html">About</a>
+      <a href="favarticle3.html">Funfacts</a>
+    </div>
+    <div class="main-topic" onclick="toggleSubtopics('subtopic3')">ENTRANCE</div>
+    <div class="subtopics" id="subtopic3">
+      <a href="entrance.html">ID Swipe</a>
+    </div>
+  </div>
+</nav>
 
-        function showSlides() {
-            const slides = document.querySelectorAll('.slide');
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-    </script>
+<div class="latest">Latest</div>
+
+<div class="grid">
+  <div class="card">
+    <img src="/background/scene1" alt="CTU">
+    <div class="card-content">
+      <div class="category">Announcements</div>
+      <div class="title">
+        <a href="ctu1.html">All About CTU</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="/background/scene2" alt="Favorite">
+    <div class="card-content">
+      <div class="category">Announcement</div>
+      <div class="title">
+        <a href="favarticle1.html">Checklist: My Favorite</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="/background/scene3" alt="Entrance">
+    <div class="card-content">
+      <div class="category">Announcements</div>
+      <div class="title">
+        <a href="entrance.html">Entrance</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="social-icons">
+      <a href="https://facebook.com" target="blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" target="blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <div class="ads">
+      <p>Advertisement</p>
+      <video autoplay muted loop width="320" height="180">
+        <source src="/background/ads.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</footer>
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function toggleSubtopics(id) {
+    const subtopics = document.getElementById(id);
+    subtopics.style.display = subtopics.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 </body>
 </html>
