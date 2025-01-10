@@ -46,40 +46,23 @@
       color: #000;
     }
     
-    .welcome-message {
+.about-content {
+  padding: 20px;
   text-align: center;
-  margin: 30px 0;
-  font-size: 30px;
-  color: black;
 }
 
-.welcome-message h2 {
-  font-size: 60px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.about-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.welcome-message p {
+.about-content p {
   font-size: 16px;
-  color: #666;
-}
-
-.btn-get-in-touch {
-  display: inline-block;
-  padding: 12px 30px; /* Adjust padding to make the button oblong */
-  margin-top: 15px;
-  font-size: 16px;
-  color: black;
-  background: linear-gradient(135deg, #F8BBD0, #B3E5FC);
-  border-radius: 25px; /* Rounded edges for the oblong shape */
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-get-in-touch:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.05);
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
 }
 
     .logo img {
@@ -273,6 +256,21 @@
       height: auto;
       margin-top: 10px;
     }
+    
+    .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.back-button:hover {
+    background-color: darkgray;
+}
   </style>
 </head>
 <body>
@@ -318,11 +316,18 @@
   </div>
 </nav>
 
-<div class="welcome-message">
-  <h2>Welcome!</h2>
-  <p>Discover the latest updates, articles, and much more! Dive in now.</p>
-  <a href="contact.html" class="btn-get-in-touch">Get in Touch</a>
+<div class="about-content">
+  <h2>ABOUT US</h2>
+  <p>We are passionate about providing valuable content that enriches your daily life. Our team works hard to bring you the best articles, updates, and resources. From education to entertainment, we cover a wide range of topics designed to inspire and inform. Join us on this exciting journey!</p>
 </div>
+
+<button class="back-button" onclick="goToHome()">Back to Home</button>
+    
+    <script>
+  function goToHome() {
+    window.location.href = "main.html";
+  }
+</script>
 
 <footer>
   <div class="footer-content">

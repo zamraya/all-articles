@@ -14,20 +14,50 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(6px);
         }
-        .signup-box {
-            width: 300px;
-            padding: 40px;
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .left-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .left-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .signup-box {
+            flex: 1;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .signup-box h2 {
             margin: 0 0 30px;
             text-align: center;
         }
-        .signup-box input[type="text"], .signup-box input[type="password"], .signup-box input[type="submit"] {
+        .signup-box input[type="text"], 
+        .signup-box input[type="password"], 
+        .signup-box input[type="submit"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -37,12 +67,26 @@
             box-sizing: border-box;
         }
         .signup-box input[type="submit"] {
-            background: lightgray;
             color: black;
             cursor: pointer;
         }
         .signup-box input[type="submit"]:hover {
+            background: #d0d0d0;
+        }
+        .signup-box button {
+            display: block;
+            width: auto;
+            margin: 0 auto 20px; /* Center the button */
+            padding: 10px 15px;
+            border: none;
             background: lightgray;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .signup-box button:hover {
+            background: #d0d0d0;
         }
         .login-link {
             text-align: center;
@@ -55,15 +99,23 @@
     </style>
 </head>
 <body>
-    <div class="signup-box">
-        <h2>Sign up</h2>
-        <form id="signupForm">
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="submit" value="Sign up">
-        </form>
-        <div class="login-link">
-            Already have an account? <a href="login.html">Log in</a>
+    <div class="container">
+        <div class="left-section">
+            <h1>Welcome to Sign Up!</h1>
+            <p>Join us by creating an account.<br>
+            Access all the features and stay connected. <br><br>Already have an account? Log in now!</p>
+        </div>
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="submit" value="Sign up">
+                <button type="button" onclick="goBack()">Back</button>
+            </form>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
         </div>
     </div>
 
@@ -72,6 +124,10 @@
             e.preventDefault();
             window.location.href = 'login.html'; 
         });
+
+        function goBack() {
+            window.location.href = 'login.html';
+        }
     </script>
 </body>
 </html>
