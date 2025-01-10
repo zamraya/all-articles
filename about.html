@@ -257,25 +257,29 @@
       margin-top: 10px;
     }
     
-    .back-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+.back-button {
+  display: inline-block;
+  padding: 12px 30px; 
+  margin: 20px auto;
+  font-size: 16px;
+  color: black;
+  background: linear-gradient(135deg, #F8BBD0, #B3E5FC);
+  border-radius: 25px; 
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block; 
+  width: fit-content; 
 }
 .back-button:hover {
-    background-color: darkgray;
+  background-color: #0056b3; 
+  transform: scale(1.05);
 }
   </style>
 </head>
 <body>
 
-<header>Artículos</header>
+<header>About</header>
 
 <nav>
   <span class="hamburger" onclick="toggleSidebar()">☰</span>
@@ -284,7 +288,7 @@
     <span style="margin: 0 10px;">|</span>
     <a href="feature.html"><strong>Features</strong></a>
     <span style="margin: 0 10px;">|</span>
-    <a href="#"><strong>About</strong></a>
+    <a href="about.html"><strong>About</strong></a>
     <span style="margin: 0 10px;">|</span>
     <a href="contact.html"><strong>Contact Us</strong></a>
   </div>
@@ -321,13 +325,7 @@
   <p>We are passionate about providing valuable content that enriches your daily life. Our team works hard to bring you the best articles, updates, and resources. From education to entertainment, we cover a wide range of topics designed to inspire and inform. Join us on this exciting journey!</p>
 </div>
 
-<button class="back-button" onclick="goToHome()">Back to Home</button>
-    
-    <script>
-  function goToHome() {
-    window.location.href = "main.html";
-  }
-</script>
+<a href="home.html" class="back-button">Back to Home</a>
 
 <footer>
   <div class="footer-content">
