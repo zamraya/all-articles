@@ -1,1 +1,1 @@
-(http://127.0.0.1:5500/home.html)
+(https://zamraya-allarticles.netlify.app/home.html)
