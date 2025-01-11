@@ -18,7 +18,8 @@
         }
         .container {
             display: flex;
-            width: 80%;
+            flex-wrap: wrap;
+            width: 90%;
             max-width: 1200px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -29,40 +30,44 @@
             flex: 1;
             background-color: rgba(255, 255, 255, 0.1);
             color: black;
-            padding: 50px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            min-width: 300px;
+            text-align: center;
         }
         .left-section h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
             color: black;
         }
         .left-section p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.5;
             color: black;
         }
         .signup-box {
             flex: 1;
-            padding: 40px;
+            padding: 30px;
             background: linear-gradient(135deg, #FFCCE5, #A7C7E7);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-width: 300px;
         }
         .signup-box h2 {
-            margin: 0 0 30px;
+            margin: 0 0 20px;
             text-align: center;
+            font-size: 1.8rem;
         }
         .signup-box input[type="text"], 
         .signup-box input[type="password"], 
         .signup-box input[type="submit"] {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 12px;
+            margin-bottom: 15px;
             border: none;
             background: white;
             border-radius: 5px;
@@ -73,12 +78,9 @@
             cursor: pointer;
         }
         .signup-box input[type="submit"]:hover {
-            background: white;
+            background: #ddd;
         }
         .signup-box button {
-            display: block;
-            width: auto;
-            margin: 0 auto 20px; 
             padding: 10px 15px;
             border: none;
             background: white;
@@ -86,9 +88,11 @@
             color: black;
             cursor: pointer;
             transition: background 0.3s ease;
+            margin: 0 auto; /* Center horizontally */
+            display: block;
         }
         .signup-box button:hover {
-            background: white;
+            background: #ddd;
         }
         .login-link {
             text-align: center;
@@ -97,6 +101,25 @@
         .login-link a {
             color: #3498db;
             text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-section, .signup-box {
+                padding: 20px;
+            }
+            .left-section h1 {
+                font-size: 1.8rem;
+            }
+            .left-section p {
+                font-size: 0.9rem;
+            }
+            .signup-box h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -124,7 +147,7 @@
     <script>
         document.getElementById('signupForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            window.location.href = 'login.html'; 
+            window.location.href = 'login.html';
         });
 
         function goBack() {
